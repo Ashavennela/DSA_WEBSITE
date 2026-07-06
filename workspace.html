@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathAI - Concept Workspace</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="workspace.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">🧠</span> PathAI
+            </div>
+            <p class="sidebar-subtitle">DSA Learning Companion</p>
+            <hr class="sidebar-divider">
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-item active">🏠 My Learning Path</a>
+                <a href="quiz.html" class="nav-item">📊 Diagnostic Test</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="content-header">
+                <div>
+                    <h1 id="workspaceTitle">Loading Module...</h1>
+                    <p class="subtitle">AI-Guided Tutorial & Interactive Visual Assets</p>
+                </div>
+                <a href="dashboard.html" class="user-profile" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px;">
+                    ← Return to Path
+                </a>
+            </header>
+
+            <div class="workspace-grid">
+                
+                <div class="tutorial-card">
+                    <div class="card-header-block">
+                        <span class="tutorial-badge">Core Concept Summary</span>
+                    </div>
+                    <p id="tutorialIntro" class="tutorial-paragraph">Analyzing directory information structure...</p>
+                    
+                    <h3 class="section-subheading">Key Properties & Rules</h3>
+                    <ul id="tutorialConcepts" class="concept-bullet-list">
+                        </ul>
+
+                    <div class="download-container">
+                        <a id="downloadPdfBtn" href="#" class="btn-download" download>
+                            <span>📥 Download Concept PDF Notes</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tutorial-card visual-card">
+                    <h3 class="section-subheading" style="margin-top:0; margin-bottom:15px;">Visual Architecture Diagram</h3>
+                    <div class="diagram-viewport">
+                        <img id="topicDiagram" src="" alt="Dynamic Visual Representation" style="display: none;">
+                        <p id="diagramFallback" class="fallback-text">Preparing interactive visualization layout...</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="data/tutorials.js"></script>
+    <script src="workspace-script.js"></script>
+</body>
+</html>

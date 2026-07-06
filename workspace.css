@@ -1,0 +1,103 @@
+/* workspace.css */
+.workspace-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+    margin-top: 24px;
+    align-items: start;
+}
+
+.tutorial-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.tutorial-badge {
+    background-color: rgba(92, 70, 228, 0.15);
+    color: #9d8df1;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.tutorial-paragraph {
+    color: var(--text-white);
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.section-subheading {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-gray);
+    margin-top: 24px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.concept-bullet-list {
+    padding-left: 20px;
+    color: var(--text-gray);
+}
+
+.concept-bullet-list li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.download-container {
+    margin-top: 32px;
+}
+
+.btn-download {
+    background-color: var(--primary-purple);
+    color: var(--text-white);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    transition: background 0.2s ease;
+}
+
+.btn-download:hover {
+    background-color: var(--primary-hover);
+}
+
+.diagram-viewport {
+    background: rgba(5, 6, 15, 0.4);
+    border: 2px dashed rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.diagram-viewport img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.fallback-text {
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+/* Responsiveness for Tablets and Mobile devices */
+@media (max-width: 1024px) {
+    .workspace-grid {
+        grid-template-columns: 1fr;
+    }
+}
