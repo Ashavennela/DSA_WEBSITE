@@ -1,0 +1,220 @@
+:root {
+    --bg-dark: #0a0c16;
+    --sidebar-bg: rgba(14, 18, 36, 0.85);
+    --card-bg: #12162b;
+    --primary-purple: #5c46e4;
+    --primary-hover: #4a35c9;
+    --text-white: #ffffff;
+    --text-gray: #8a8fbc;
+    --completed-color: #2ecc71;
+    --review-color: #f1c40f;
+    --to-learn-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #090a15 0%, #0f1c3f 100%);
+    color: var(--text-white);
+    min-height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: var(--sidebar-bg);
+    backdrop-filter: blur(12px);
+    padding: 35px 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-subtitle {
+    font-size: 12px;
+    color: var(--text-gray);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-divider {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 25px 0;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    color: var(--text-gray);
+    text-decoration: none;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    color: var(--text-white);
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.nav-item.active {
+    background-color: var(--primary-purple);
+    color: var(--text-white);
+    box-shadow: 0 4px 15px rgba(92, 70, 228, 0.3);
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 20px;
+}
+
+.content-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: var(--text-gray);
+    font-size: 15px;
+}
+
+.user-profile {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.topics-section {
+    margin-top: 10px;
+}
+
+.section-title-container {
+    margin-bottom: 25px;
+}
+
+.section-title-container h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.section-desc {
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.topic-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(92, 70, 228, 0.4);
+    box-shadow: 0 12px 24px rgba(92, 70, 228, 0.15);
+}
+
+.topic-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+.topic-status {
+    align-self: flex-start;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-completed {
+    background-color: rgba(46, 204, 113, 0.15);
+    color: var(--completed-color);
+}
+
+.status-review {
+    background-color: rgba(241, 196, 115, 0.15);
+    color: var(--review-color);
+}
+
+.status-to-learn {
+    background-color: rgba(231, 76, 60, 0.15);
+    color: var(--to-learn-color);
+}
+
+.progress-text {
+    color: var(--text-gray);
+    font-size: 13px;
+    margin-top: 4px;
+}

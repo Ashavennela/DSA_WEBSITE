@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathAI - Student Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">🧠</span> PathAI
+            </div>
+            <p class="sidebar-subtitle">DSA Learning Companion</p>
+            <hr class="sidebar-divider">
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-item active">📚 My Learning Path</a>
+                <a href="quiz.html" class="nav-item">📝 Diagnostic Test</a>
+                <a href="#" class="nav-item">📊 Analytics Dashboard</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="content-header">
+                <div>
+                    <h1>Welcome Back!</h1>
+                    <p class="subtitle">Your customized AI learning path is active.</p>
+                </div>
+                <div class="user-profile">
+                    <span class="status-dot"></span> Student Mode
+                </div>
+            </header>
+
+            <section class="topics-section">
+                <div class="section-title-container">
+                    <h2>Data Structures & Algorithms Topics</h2>
+                    <p class="section-desc">Click on any module to view AI-generated explanations, SVG diagrams, and adaptive quizzes.</p>
+                </div>
+                
+                <div class="topics-grid" id="topicsGrid"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="./dashboard-script.js"></script>
+</body>
+</html>
